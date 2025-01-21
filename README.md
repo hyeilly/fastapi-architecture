@@ -1,0 +1,2 @@
+# fastapi-architecture
+fastapi architecture 
