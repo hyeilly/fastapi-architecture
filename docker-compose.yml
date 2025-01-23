@@ -1,15 +1,15 @@
 version: "3"
 
 services:
-  core-api:
+  core_api:
     build:
       context: .
-      dockerfile: core-api/Dockerfile.dev
-    container_name: core-api
+      dockerfile: core_api/Dockerfile.dev
+    container_name: core_api
     ports:
       - "8000:8000"
     volumes:
-      - ./core-api/app:/app/app
+      - ./core_api/app:/app/app
       - ./logs:/app/logs
     networks:
       - backend
@@ -24,7 +24,7 @@ services:
     networks:
       - backend
     depends_on:
-      - core-api
+      - core_api
 
 networks:
   backend:
