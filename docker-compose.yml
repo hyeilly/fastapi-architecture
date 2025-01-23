@@ -1,0 +1,31 @@
+version: "3"
+
+services:
+  core-api:
+    build:
+      context: .
+      dockerfile: core-api/Dockerfile.dev
+    container_name: core-api
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./core-api/app:/app/app
+      - ./logs:/app/logs
+    networks:
+      - backend
+
+  nginx:
+    build:
+      context: .
+      dockerfile: nginx/Dockerfile
+    container_name: nginx
+    ports:
+      - "80:80"
+    networks:
+      - backend
+    depends_on:
+      - core-api
+
+networks:
+  backend:
+    driver: bridge

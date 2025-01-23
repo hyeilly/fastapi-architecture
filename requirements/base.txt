@@ -1,0 +1,12 @@
+# FastAPI와 관련된 패키지들
+fastapi
+uvicorn
+gunicorn
+pydantic
+requests
+
+# 로깅 관련 패키지
+loguru
+
+# 외부 서비스 설치 (예시)
+git+https://github.com/hyeilly/recommend-llm.git
