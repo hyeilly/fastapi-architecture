@@ -38,6 +38,6 @@ my-project/
 ## Docker 실행
 ```
 docker-compose build --no-cache
-
+docker-compose up -d
 docker exec -it {container_id} bash
 ```

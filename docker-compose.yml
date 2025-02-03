@@ -9,7 +9,7 @@ services:
     ports:
       - "8000:8000"
     volumes:
-      - ./core_api/app:/app/app
+      - ./core_api/app:/core_api/app
       - ./logs:/app/logs
     networks:
       - backend
