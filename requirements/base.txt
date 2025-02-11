@@ -9,4 +9,5 @@ requests
 loguru
 
 # 외부 서비스 설치 (예시)
-git+https://github.com/hyeilly/recommend-llm.git
+
+git+https://github.com/hyeilly/recommend-llm@release/fastapi
